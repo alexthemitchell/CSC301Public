@@ -1,0 +1,27 @@
+words.txt completed in 11.7180300354958 seconds.
+Max (like): 12
+	(found in 0.00198900699615479 seconds)
+Min (a): 2
+	(found in 0.00161004066467285 seconds)
+Deleted 'the' in 0.00208097696304321 seconds.
+
+words2.txt completed in 10.6245880126953 seconds.
+Max (th): 10
+	(found in 0.00241100788116455 seconds)
+Min (aaron): 1
+	(found in 0.00182098150253296 seconds)
+Deleted 'the' in 0.0039060115814209 seconds.
+
+Holmes.txt completed in 2.31027895212173 seconds.
+Max (the): 446
+	(found in 0.000694036483764648 seconds)
+Min (abandoned): 1
+	(found in 0.00056302547454834 seconds)
+Deleted 'the' in 0.00074303150177002 seconds.
+
+OxfordMedical.txt completed in 1.2478209733963 seconds.
+Max (the): 556
+	(found in 0.000433027744293213 seconds)
+Min (aardvark): 1
+	(found in 0.000465989112854004 seconds)
+Deleted 'the' in 0.000550985336303711 seconds.
