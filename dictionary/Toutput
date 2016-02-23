@@ -1,0 +1,29 @@
+words.txt completed in 451.127946376801 milliseconds.
+	Max (like): 12 (43.1550145149231 milliseconds)
+	Min: (weave): 2 (41.1550402641296 milliseconds)
+	Looked up 'the' in 0.027000904083252 milliseconds
+	Deleted 'the' in 0.00900030136108398 milliseconds
+
+
+words2.txt completed in 390.936017036438 milliseconds.
+	Max (th): 10 (65.2099847793579 milliseconds)
+	Min: (wax): 1 (59.3059659004211 milliseconds)
+	Looked up 'the' in 0.0169873237609863 milliseconds
+	Deleted 'the' in 0.00900030136108398 milliseconds
+
+
+Holmes.txt completed in 182.255029678345 milliseconds.
+	Max (the): 446 (18.8869833946228 milliseconds)
+	Min: (journey): 1 (15.5499577522278 milliseconds)
+	Looked up 'the' in 0.0259876251220703 milliseconds
+	Deleted 'the' in 0.0100135803222656 milliseconds
+
+
+OxfordMedical.txt completed in 150.040030479431 milliseconds.
+	Max (the): 556 (17.7319645881653 milliseconds)
+	Min: (joins): 1 (13.1750106811523 milliseconds)
+	Looked up 'the' in 0.0169873237609863 milliseconds
+	Deleted 'the' in 0.00900030136108398 milliseconds
+
+
+Program ended with exit code: 0
