@@ -16,19 +16,21 @@ public class AMTree<T> {
   public typealias Action = ((T) -> Void)
 
   var root: AMTNode<T>!
-  var insertionQueue = Queue<AMTNode<T>>()
+  var insertionQueue = [AMTNode<T>]()
 
   public func insert(item: T) {
     let node = AMTNode<T>(data: item)
-    if let parent = insertionQueue.peek() {
+    if let parent = insertionQueue.first {
       if parent.left == nil {
-        parent.right = node
+        parent.left = node
       } else {
         parent.right = node
-        insertionQueue.dequeue()
+        insertionQueue.removeFirst()
       }
+    } else { // this is the first insertion
+      root = node
     }
-    insertionQueue.enqueue(node)
+    insertionQueue.append(node)
   }
 
   ///MARK: In Order Traversal
@@ -39,6 +41,7 @@ public class AMTree<T> {
   private func inOrderTraversal(perform action: Action?, fromBase base: AMTNode<T>?) {
     if let base = base {
       inOrderTraversal(perform: action, fromBase: base.left)
+      print(base.data)
       action?(base.data)
       inOrderTraversal(perform: action, fromBase: base.right)
     }
@@ -75,18 +78,19 @@ public class AMTree<T> {
   /// MARK: Bredth First Traversal
 
   public func breadthFirstTraversal(perform action: Action?) {
-    let queue = Queue<AMTNode<T>>()
-    queue.enqueue(root)
+    var queue = [AMTNode<T>]()
+    queue.append(root)
     breadthFirstTraversal(perform: action, withQueue: queue)
   }
 
-  private func breadthFirstTraversal(perform action: Action?, withQueue queue: Queue<AMTNode<T>>) {
-    if let node = queue.dequeue() {
+  private func breadthFirstTraversal(perform action: Action?, var withQueue queue: [AMTNode<T>]) {
+    if !queue.isEmpty {
+      let node = queue.removeFirst()
       if let left = node.left {
-        queue.enqueue(left)
+        queue.append(left)
       }
       if let right = node.right {
-        queue.enqueue(right)
+        queue.append(right)
       }
       action?(node.data)
     }
